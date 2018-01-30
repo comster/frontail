@@ -65,6 +65,7 @@ if (program.daemonize) {
    */
   const io = socketio.listen(server, {
     log: false,
+    path: '/logs/socket.io'
   });
 
   if (doAuthorization) {
