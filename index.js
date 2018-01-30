@@ -65,7 +65,8 @@ if (program.daemonize) {
    */
   const io = socketio.listen(server, {
     log: false,
-    path: '/logs/socket.io'
+    path: '/logs/socket.io',
+    transports: ['polling']
   });
 
   if (doAuthorization) {
